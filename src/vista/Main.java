@@ -18,7 +18,7 @@ public class Main {
         int numeroUno = 0;
         int numeroDos = 0;
         
-        //1.2.- SOBREESCRIBIR EL VALOR
+        //1.2.- SOBREESCRIBIR EL VALOR (TRANSFORMAR O SOBREESCRITURA)
         numeroUno = 19;
         numeroDos = 13;
         
@@ -33,6 +33,28 @@ public class Main {
         Scanner s = new Scanner(System.in);
         
         //TRANSFORMAR DE DATO PRIMITIVO A OBJETO
-        int num1 = Integer.parseInt(s.next());
+        System.out.println("Ingrese número 1:");
+        int num1 = Integer.parseInt(s.next()); //int num1 = nextInt();
+        
+        System.out.println("Ingrese número 2:");
+        int num2 = Integer.parseInt(s.next());
+        
+        num1+=num2; //num1 = num1 + num2
+        
+        System.out.println("El resultado es: " + num1);
+        
+        //TRANSFORMAR DE OBJETO A DATO PRIMITIVO
+        String cadena = "La suma de 2 números enteros es:";
+        
+        System.out.println("Ingrese número 1:");
+        int n1 = Integer.parseInt(s.next());
+        
+        System.out.println("Ingrese número 2:");
+        int n2 = s.nextInt();
+        
+        int resul = n1 + n2;
+        
+        //+"" TRANSFORMA CUALQUIER TIPO DE DATO EN CADENA
+        cadena+=resul+"";
     }
 }
